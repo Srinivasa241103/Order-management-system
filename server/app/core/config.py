@@ -3,7 +3,7 @@ from functools import lru_cache
 
 class Settings(BaseSettings):
     DATABASE_URL: str
-
+    FRONTEND_URL: str
 
     APP_ENV: str = "development"
     APP_NAME: str = "Inventory & Order Management System"
