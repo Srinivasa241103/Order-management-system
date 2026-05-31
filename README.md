@@ -4,7 +4,7 @@ A small full-stack app for managing products, customers, and orders, with a dash
 
 ## Live
 
-- **Frontend** — https://<your-vercel-app>.vercel.app
+- **Frontend** — https://stocklyofficial.vercel.app/
 - **Backend API** — https://order-management-system-production-f56d.up.railway.app
 - **Swagger / OpenAPI** — https://order-management-system-production-f56d.up.railway.app/docs
 - **Backend image (Docker Hub)** — https://hub.docker.com/r/srinivasa241103/oms-backend
