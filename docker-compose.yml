@@ -28,5 +28,15 @@ services:
       postgres:
         condition: service_healthy
 
+  frontend:
+    build:
+      context: ./client
+      args:
+        VITE_API_URL: http://localhost:8000/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:

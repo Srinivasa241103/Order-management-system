@@ -76,6 +76,9 @@ class OrderService:
                     quantity=quantity,
                     unit_price=product['price'],
                 )
+                # create_order_item RETURNINGs only order_items columns;
+                # product_name lives on products, so attach it for the response
+                order_item['product_name'] = product['name']
                 order_items.append(order_item)
  
                 self.product_repo.deduct_stock(

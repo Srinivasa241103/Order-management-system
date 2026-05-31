@@ -28,14 +28,14 @@ class DuplicateSKUException(AppException):
     def __init__(self, sku: str):
         super().__init__(
             message=f"Product with SKU '{sku}' already exists",
-            status_code=400,
+            status_code=409,
         )
  
 class DuplicateEmailException(AppException):
     def __init__(self, email: str):
         super().__init__(
             message=f"Customer with email '{email}' already exists",
-            status_code=400,
+            status_code=409,
         )
  
 class InsufficientStockException(AppException):
