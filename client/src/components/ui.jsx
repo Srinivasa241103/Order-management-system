@@ -1,7 +1,12 @@
 import { useEffect, useState, useCallback, createContext, useContext } from "react";
 import { Icon } from "./icons.jsx";
 
-export const money = (n) => "$" + Number(n || 0).toFixed(2);
+const inrFormatter = new Intl.NumberFormat("en-IN", {
+  style: "currency",
+  currency: "INR",
+  minimumFractionDigits: 2,
+});
+export const money = (n) => inrFormatter.format(Number(n || 0));
 export const fmtDate = (ts) => {
   const d = new Date(ts);
   return d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) +

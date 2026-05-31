@@ -37,7 +37,7 @@ function ProductForm({ initial, onSubmit, busy }) {
         <Input value={f.sku} error={errors.sku} onChange={(e) => set("sku", e.target.value)} placeholder="WM-100"/>
       </Field>
       <div className="form-row">
-        <Field label="Price (USD)" required error={errors.price}>
+        <Field label="Price (INR)" required error={errors.price}>
           <Input value={f.price} error={errors.price} onChange={(e) => set("price", e.target.value)} placeholder="0.00" inputMode="decimal"/>
         </Field>
         <Field label="Stock quantity" required error={errors.stock}>
